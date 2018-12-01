@@ -1,0 +1,33 @@
+{
+  "name": "indorse_awslambda",
+  "version": "1.0.0",
+  "description": "NodeJS application which will be a Lambda Service for Indorse Project",
+  "main": "index.js",
+  "engine": {
+    "node": "8.10",
+    "npm": "5.6.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitanxen/indorse_awslambda.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Lambda",
+    "DynamoDB"
+  ],
+  "author": "Bitan Biswas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bitanxen/indorse_awslambda/issues"
+  },
+  "homepage": "https://github.com/bitanxen/indorse_awslambda#readme",
+  "dependencies": {
+    "aws-sdk": "^2.368.0",
+    "aws-serverless-express": "^3.3.5",
+    "express": "^4.16.4"
+  }
+}

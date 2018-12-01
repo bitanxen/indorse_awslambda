@@ -1,4 +1,4 @@
-#Indorse Project 
+# Indorse Project 
 
 ## Requirements
 
@@ -10,3 +10,15 @@
 6. Use async/await calls in the Node JS functions
 7. Add relevant code comments and modularise the code properly. Create more than one Lambda wherever required and make inter Lambda calls if required
 8. Write an automated test for this lambda
+
+## DynamoDB Table Creation:
+
+### Drop Table (if already exists)
+aws dynamodb delete-table --table-name TB_USER --endpoint-url http://localhost:8000
+
+### Creating Table
+Go to the config/schemas directory and execute the below command:
+aws dynamodb create-table --cli-input-json file://indorse_tb_user.json --endpoint-url http://localhost:8000
+
+### List Tables
+aws dynamodb list-tables --endpoint-url http://localhost:8000

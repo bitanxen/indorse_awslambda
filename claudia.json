@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "indorse_awslambda-executor",
+    "name": "indorse_awslambda",
+    "region": "ap-southeast-1"
+  },
+  "api": {
+    "id": "tbi0iswybg"
+  }
+}

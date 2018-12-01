@@ -1,0 +1,19 @@
+{
+    "TableName": "TB_USER",
+    "KeySchema": [
+      {
+        "AttributeName": "USER_ID",
+        "KeyType": "HASH"
+      }
+    ],
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "USER_ID",
+            "AttributeType": "S"
+        }
+    ],
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 5,
+        "WriteCapacityUnits": 5
+    }
+  }
