@@ -88,16 +88,16 @@ This Lambda function require few environment variables to be set:
 ## Test API in AWS Lambda:
 
 Get all users:
-> GET https://tbi0iswybg.execute-api.ap-southeast-1.amazonaws.com/latest/api/user
+> GET https://fjthw9cb9i.execute-api.ap-southeast-1.amazonaws.com/latest/api/user
 
 Get a particular user
-> GET https://tbi0iswybg.execute-api.ap-southeast-1.amazonaws.com/latest/api/user/{user_id}
+> GET https://fjthw9cb9i.execute-api.ap-southeast-1.amazonaws.com/latest/api/user/{user_id}
 
 Save an user
-> POST https://tbi0iswybg.execute-api.ap-southeast-1.amazonaws.com/latest/api/user
+> POST https://fjthw9cb9i.execute-api.ap-southeast-1.amazonaws.com/latest/api/user
 
 Update an user
-> PUT https://tbi0iswybg.execute-api.ap-southeast-1.amazonaws.com/latest/api/{user_id}
+> PUT https://fjthw9cb9i.execute-api.ap-southeast-1.amazonaws.com/latest/api/{user_id}
 
 ## Test API in Local
 

@@ -1,10 +1,10 @@
 {
   "lambda": {
-    "role": "indorse_lambda_dynamo_role",
+    "role": "indorse_awslambda-executor",
     "name": "indorse_awslambda",
     "region": "ap-southeast-1"
   },
   "api": {
-    "id": "loti7g6tt1"
+    "id": "fjthw9cb9i"
   }
 }
