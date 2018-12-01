@@ -1,6 +1,6 @@
 {
   "lambda": {
-    "role": "indorse_awslambda-executor",
+    "role": "indorse_lambda_dynamo_role",
     "name": "indorse_awslambda",
     "region": "ap-southeast-1"
   },
