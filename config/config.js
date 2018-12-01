@@ -1,3 +1,3 @@
 module.exports = {
-    aws_table_name: 'TB_USER'
+    user_table: 'TB_USER'
 }

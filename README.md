@@ -61,3 +61,34 @@ This Lambda function require few environment variables to be set:
 
 ### Publish below command to re-deploy:
 >claudia update
+
+
+## Test API in AWS Lambda:
+
+Get all users:
+> GET https://tbi0iswybg.execute-api.ap-southeast-1.amazonaws.com/latest/api/user
+
+Get a particular user
+> GET https://tbi0iswybg.execute-api.ap-southeast-1.amazonaws.com/latest/api/user/{user_id}
+
+Save an user
+> POST https://tbi0iswybg.execute-api.ap-southeast-1.amazonaws.com/latest/api/user
+
+Update an user
+> PUT https://tbi0iswybg.execute-api.ap-southeast-1.amazonaws.com/latest/api/{user_id}
+
+## Test API in Local
+
+Get all users:
+> GET http://localhost:5000/api/user
+
+Get a particular user
+> GET http://localhost:5000/api/user/{user_id}
+
+Save an user
+> POST http://localhost:5000/api/user
+
+Update an user
+> PUT http://localhost:5000/api/{user_id}
+
+## Automatic Test

@@ -1,13 +1,13 @@
+const dynamoose = require('dynamoose');
 const AWS = require('aws-sdk');
 const keys = require('../config/keys');
 
 module.exports = {
-    dbclient: function() {
-        const myConfig = new AWS.Config({
-            endpoint: keys.endpoint, region: keys.region
-        });
+    get_connection: function() {
+        const myConfig = new AWS.Config(keys);
         var dynamodb = new AWS.DynamoDB(myConfig);
 
-        return new AWS.DynamoDB.DocumentClient({ service: dynamodb });
+        dynamoose.setDDB(dynamodb);
+        return dynamoose;
     }
 }
