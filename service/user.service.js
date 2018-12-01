@@ -40,5 +40,26 @@ module.exports = {
           user.save();
 
         return user_id;
+    },
+    fetch_user : async (user_id) => {
+        const user = await User.get(user_id);
+        return user;
+    },
+    update_user : async (res) => {
+        const user = new User({
+            USER_ID: res.USER_ID, 
+            TITLE: res.TITLE,
+            NAME: res.NAME,
+            EMAIL: res.EMAIL,
+            MOBILE: res.MOBILE,
+            COMPANY: res.COMPANY,
+            ADDRESS: res.ADDRESS,
+            SPORTS_INTEREST: res.SPORTS_INTEREST,
+            FOOD_INTEREST: res.FOOD_INTEREST
+        });
+
+        await User.update(user);
+
+        return user;
     }
 }
