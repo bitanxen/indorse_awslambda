@@ -21,14 +21,14 @@ Start DynamoDB:
 For this project, we need a table TB_USER created in DynamoDB. The table schema is available in config/schemas directory
 
 ### Drop Table (if already exists)
-aws dynamodb delete-table --table-name TB_USER --endpoint-url http://localhost:8000
+> aws dynamodb delete-table --table-name TB_USER --endpoint-url http://localhost:8000
 
 ### Creating Table
 Go to the config/schemas directory and execute the below command:
-aws dynamodb create-table --cli-input-json file://indorse_tb_user.json --endpoint-url http://localhost:8000
+> aws dynamodb create-table --cli-input-json file://indorse_tb_user.json --endpoint-url http://localhost:8000
 
 ### List Tables
-aws dynamodb list-tables --endpoint-url http://localhost:8000
+> aws dynamodb list-tables --endpoint-url http://localhost:8000
 
 ## Node Application
 This is NodeJS REST application which is running under Express Server.
