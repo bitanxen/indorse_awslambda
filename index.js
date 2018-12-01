@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
           }
     });
 
-    res.send('Hello world!')
+    res.send(process.env.APP_ENV)
 });
 
 

@@ -36,17 +36,28 @@ This is NodeJS REST application which is running under Express Server.
 To make a NodeJS Express server, AWS Lambda compatible, we need to make few modification in code base.
 [ClaudiaJS](https://claudiajs.com/) is a awesome tool to convert a Node Express application into a AWS Lambda serverless application.
 
-Install ClaudiaJS using npm:
+### Install ClaudiaJS using npm:
 > npm install claudia -g
 
-Generate Serverless Express Application using ClaudiaJS
+### Generate Serverless Express Application using ClaudiaJS
 >claudia generate-serverless-express-proxy --express-module index
+
+This will generate a file ```claudia.json``` which will have AWS Role, Lamdba Function Name and Region information.
 
 Here ```index``` is the main script name without the extension (index.js).
 But this ```index.js``` will not work in your local development machine. Which is why ```index.local.js``` is created and referred in ```package.json```
 
-Deploy Application in a specific AWS zone 
+### Deploy Application in a specific AWS zone 
 >claudia create --handler lambda.handler --deploy-proxy-api --region ap-southeast-1
 
 This will create a AWS Lambda function, provided that you have AWSCLI installed and configured in local system
 
+### Test
+This Lambda function require few environment variables to be set:
+
+| Variable Name        | Value                               |
+| -------------------- |:-----------------------------------:|
+| APP_ENV              | production                          |
+
+### Publish below command to re-deploy:
+>claudia update
