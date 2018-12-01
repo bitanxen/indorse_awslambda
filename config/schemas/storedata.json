@@ -1,13 +1,17 @@
 {
-	"USER_ID": {"S": "user456"},
-	"TITLE": {"S": "Ms"},
-	"NAME": {"S": "Mariana Khan"},
-	"EMAIL": {"S": "mariana@dummydomain.com"},
-	"MOBILE": {"S": "98679856"},
-	"COMPANY": {"S": "CDE"},
-	"ADDRESS": {"S": "Bedok"},
-	"FOOD_INTEREST": {"L" : [
-			{"S": "Coffee"}
-		]
-	}
+	"ADDRESS": "Bedok",
+	"USER_ID": "user456",
+	"TITLE": "Ms",
+	"EMAIL": "mariana@dummydomain.com",
+	"NAME": "Mariana Khan",
+	"MOBILE": "986798590",
+	"COMPANY": "CDE",
+	"INTEREST": [
+		{
+			"FOOD": "Tea"
+		},
+		{
+			"SPORTS": "Cricket,Football"
+		}
+	]
 }

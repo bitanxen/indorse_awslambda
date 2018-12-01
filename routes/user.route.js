@@ -3,6 +3,10 @@ const helper_util = require('../util/helper.util');
 
 
 module.exports = (app) => {
+    app.get('/', (req,res) => {
+        res.send('Indorse Project')
+    });
+
     app.get('/api/user', async (req, res) => {
         try{
             const user = await user_service.fetch_all_user();

@@ -20,8 +20,7 @@ module.exports = {
             user_id = user.USER_ID;
           });
 
-          if(user_id){
-          } else {
+          if(!user_id){
             user_id = uuidv1()
           }
           
@@ -33,11 +32,10 @@ module.exports = {
             MOBILE: res.MOBILE,
             COMPANY: res.COMPANY,
             ADDRESS: res.ADDRESS,
-            SPORTS_INTEREST: res.SPORTS_INTEREST,
-            FOOD_INTEREST: res.FOOD_INTEREST
+            INTEREST: res.INTEREST
           });
 
-          user.save();
+          await user.save();
 
         return user_id;
     },
@@ -46,17 +44,16 @@ module.exports = {
         return user;
     },
     update_user : async (res) => {
-        const user = new User({
-            USER_ID: res.USER_ID, 
+        const user = {
+            USER_ID: res.USER_ID,  
             TITLE: res.TITLE,
             NAME: res.NAME,
             EMAIL: res.EMAIL,
             MOBILE: res.MOBILE,
             COMPANY: res.COMPANY,
             ADDRESS: res.ADDRESS,
-            SPORTS_INTEREST: res.SPORTS_INTEREST,
-            FOOD_INTEREST: res.FOOD_INTEREST
-        });
+            INTEREST: res.INTEREST
+        }
 
         await User.update(user);
 

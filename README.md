@@ -58,10 +58,31 @@ This Lambda function require few environment variables to be set:
 | Variable Name        | Value                               |
 | -------------------- |:-----------------------------------:|
 | APP_ENV              | production                          |
+| ACCESS_KEY           | {ACCESS_KEY}                        |
+| ACCESS_SECRET        | {ACCESS_SECRET}                     |
 
 ### Publish below command to re-deploy:
 >claudia update
 
+## Sample Payload
+```{
+    "ADDRESS": "Bedok",
+    "USER_ID": "user456",
+    "TITLE": "Ms",
+    "EMAIL": "mariana@dummydomain.com",
+    "NAME": "Mariana Khan",
+    "MOBILE": "986798590",
+    "COMPANY": "CDE",
+    "INTEREST": [
+        {
+            "FOOD": "Tea"
+        },
+        {
+            "SPORTS": "Cricket,Football"
+        }
+    ]
+}
+```
 
 ## Test API in AWS Lambda:
 
@@ -92,3 +113,8 @@ Update an user
 > PUT http://localhost:5000/api/{user_id}
 
 ## Automatic Test
+
+
+## Lambda API Gateway
+
+> aws apigateway get-resources --rest-api-id tbi0iswybg --region ap-southeast-1
