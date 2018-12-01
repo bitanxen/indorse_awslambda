@@ -65,7 +65,8 @@ This Lambda function require few environment variables to be set:
 >claudia update
 
 ## Sample Payload
-```{
+```
+{
     "ADDRESS": "Bedok",
     "USER_ID": "user456",
     "TITLE": "Ms",
@@ -111,8 +112,6 @@ Save an user
 
 Update an user
 > PUT http://localhost:5000/api/{user_id}
-
-## Automatic Test
 
 
 ## Lambda API Gateway
